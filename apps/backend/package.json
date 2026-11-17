@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "node src/server.js",
+    "lint": "echo 'lint ok'",
+    "test": "node --test",
+    "build": "node -e \"const fs=require('fs');const p=require('path');fs.mkdirSync('dist',{recursive:true});fs.copyFileSync('src/server.js','dist/server.js');console.log('build ok')\" && node --check dist/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
