@@ -1,6 +1,9 @@
 node_modules/
-dist/
 .env
 .env.local
 .DS_Store
 *.log
+
+# 忽略子目录的 dist（apps/frontend/dist, apps/backend/dist 等）
+**/dist/
+!/dist/
